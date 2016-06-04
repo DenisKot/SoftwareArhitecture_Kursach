@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Search";
+}
+
+<form action="Search">
+    <input class="customtextbox" type="text" name="Text" value="@ViewBag.SearchText">
+    <input class="custombutton" type="submit" value="Search &raquo;">
+</form>
+
+@foreach (var item in ViewBag.List)
+{
+    <a class="listTitle" href="@item.Url">@item.Title</a>
+    <a class="listUrl" href="@item.Url">
+        <p>@item.Url</p>
+    </a>
+    <p class="listDescription">@item.Description</p>
+    <hr/>
+}
